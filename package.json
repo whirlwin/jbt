@@ -1,6 +1,6 @@
 {
   "name": "jbt",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Java build tool written in Node.js",
   "main": "bin/jbt.js",
   "preferGlobal": true,
@@ -8,8 +8,12 @@
     "jbt": "bin/jbt.js"
   },
   "scripts": {
+    "start":      "gulp develop",
     "prepublish": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "minimist": "~1.1.0"
   },
   "devDependencies": {
     "coffee-script": "~1.8.0",

@@ -1,6 +1,10 @@
+cliParser = require './cli-parser'
+
 class JbtApp
 
   start: ->
-    console.log('foobar!' + process.argv[2])
+    taskHandlerPath = cliParser.parse()
+    taskHandler = require taskHandlerPath
+    taskHandler.process()
 
 module.exports = new JbtApp()

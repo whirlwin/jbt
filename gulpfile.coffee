@@ -6,3 +6,5 @@ gulp.task 'build', ->
     .pipe(gulpCoffee())
     .pipe(gulp.dest 'lib')
 
+gulp.task 'develop', ->
+  gulp.watch('src/**/*.coffee', ['build'])

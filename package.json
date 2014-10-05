@@ -1,11 +1,19 @@
 {
   "name": "jbt",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A Java build tool written in Node.js",
-  "main": "index.js",
+  "main": "bin/jbt.js",
+  "bin": {
+    "jbt": "bin/jbt.js"
+  },
   "scripts": {
     "prepublish": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.8.0",
+    "gulp":          "~3.8.8",
+    "gulp-coffee":   "~2.2.0"
   },
   "repository": {
     "type": "git",
@@ -15,9 +23,5 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/whirlwin/jbt/issues"
-  }, "devDependencies": {
-    "coffee-script": "~1.8.0",
-    "gulp":          "~3.8.8",
-    "gulp-coffee":   "~2.2.0"
   }
 }

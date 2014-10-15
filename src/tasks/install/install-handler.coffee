@@ -3,6 +3,6 @@ TaskHandler = require '../task-handler'
 class InstallHandler extends TaskHandler
 
   process: ->
-    console.log('Processing install task')
+    logger.info 'Installing dependencies'
 
 module.exports = new InstallHandler()

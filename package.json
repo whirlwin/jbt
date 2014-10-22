@@ -8,16 +8,20 @@
     "jbt": "bin/jbt.js"
   },
   "scripts": {
-    "start":      "gulp develop",
-    "prepublish": "gulp build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":      "gulp dev",
+    "prepublish": "gulp clean && gulp build",
+    "test":       "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "async":    "~0.9.0",
     "minimist": "~1.1.0",
+    "q":        "~1.0.1",
+    "request":  "~2.45.0",
     "winston":  "~0.8.0"
   },
   "devDependencies": {
     "coffee-script": "~1.8.0",
+    "del":           "~0.1.3",
     "gulp":          "~3.8.8",
     "gulp-coffee":   "~2.2.0"
   },

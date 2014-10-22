@@ -1,3 +1,4 @@
+del        = require 'del'
 gulp       = require 'gulp'
 gulpCoffee = require 'gulp-coffee'
 
@@ -6,5 +7,8 @@ gulp.task 'build', ->
     .pipe(gulpCoffee())
     .pipe(gulp.dest 'lib')
 
-gulp.task 'develop', ->
-  gulp.watch('src/**/*.coffee', ['build'])
+gulp.task 'dev', ->
+  gulp.watch 'src/**/*.coffee', ['build']
+
+gulp.task 'clean', ->
+  del 'lib/**/'
